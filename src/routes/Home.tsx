@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async'
 import { TypeAnimation } from 'react-type-animation';
 import Hero from '../components/Hero'
 import CaseStudy from '../components/CaseStudy'
+import { asset } from '../lib/asset'
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       </Helmet>
 
       <Hero
-        bg="${base}img/rayi-christian-wicaksono-366.jpg"
+        bg="{asset('img/rayi-christian-wicaksono-366.jpg')}"
         alt="My desk in black and white"
         overlay={1}
         heightClass="height-50"
