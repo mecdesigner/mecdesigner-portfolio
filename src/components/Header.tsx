@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+const base = import.meta.env.BASE_URL
 
 export default function Header() {
   return (
@@ -9,8 +10,8 @@ export default function Header() {
             <div className="col-lg-2 col-md-2">
               <div className="bar__module">
                 <Link to="/">
-                  <img className="logo logo-dark" alt="Mecdesigner logo dark" src="/img/logo-mecdesigner-dark.png" />
-                  <img className="logo logo-light" alt="Mecdesigner logo light" src="/img/logo-mecdesigner-light.png" />
+                  <img className="logo logo-dark" alt="Mecdesigner logo dark" src="${base}img/logo-mecdesigner-dark.png" />
+                  <img className="logo logo-light" alt="Mecdesigner logo light" src="${base}img/logo-mecdesigner-light.png" />
                 </Link>
               </div>
             </div>
