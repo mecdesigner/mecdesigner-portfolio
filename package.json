@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "git config user.name \"mecdesigner\" && git config user.email \"4757077+mecdesigner@users.noreply.github.com\""
   },
   "dependencies": {
     "react": "^18.3.1",
