@@ -2,9 +2,9 @@ import { Helmet } from 'react-helmet-async'
 import { TypeAnimation } from 'react-type-animation';
 import Hero from '../components/Hero'
 import CaseStudy from '../components/CaseStudy'
-const base = import.meta.env.BASE_URL
 
 export default function Home() {
+  const base = import.meta.env.BASE_URL
   return (
     <>
       <Helmet>
