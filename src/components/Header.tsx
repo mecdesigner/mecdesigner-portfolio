@@ -1,7 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 
 export default function Header() {
-  const base = import.meta.env.BASE_URL
   return (
     <header className="nav-container">
       <nav id="menu1" className="bar bar--sm bar-1 pos-fixed original--bg">
