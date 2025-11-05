@@ -141,7 +141,7 @@ export default function Home() {
         reverse
       />
       <CaseStudy
-        img="img/helpicam-cover.jpg"
+        img="img/helpicam-cover.webp"
         alt="Helpicam app preview"
         title="Helpicam"
         label="Square & Flat"
@@ -166,7 +166,7 @@ export default function Home() {
         href="/asperbrothers"
       />
       <CaseStudy
-        img="img/mybank-01.webp"
+        img="img/mybank-cover.webp"
         alt="MyBank app preview"
         title="MyBank"
         label="Flat"
