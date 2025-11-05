@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* Case studies (reuse component) */}
       <CaseStudy
-        img="/img/bbg-gds-02.jpg"
+        img="img/bbg-gds-02.jpg"
         alt="BBG Webshops preview"
         title="BBG Global Design System"
         label="Ecommerce"
@@ -115,7 +115,7 @@ export default function Home() {
         href="/globaldesignsystem"
       />
       <CaseStudy
-        img="/img/bbg-ux-06.jpg"
+        img="img/bbg-ux-06.jpg"
         alt="BBG UX Analysis preview"
         title="UX Analysis for BBG Webshops"
         label="Ecommerce"
@@ -124,7 +124,7 @@ export default function Home() {
         reverse
       />
       <CaseStudy
-        img="/img/ac-lp-22.png"
+        img="img/ac-lp-22.png"
         alt="Altroconsumo preview"
         title="Altroconsumo"
         label="Web design"
@@ -132,7 +132,7 @@ export default function Home() {
         href="/altroconsumo"
       />
       <CaseStudy
-        img="/img/wheeshing-06.jpg"
+        img="img/wheeshing-06.jpg"
         alt="Wheeshing app preview"
         title="Wheeshing"
         label="Minimalistic"
@@ -141,7 +141,7 @@ export default function Home() {
         reverse
       />
       <CaseStudy
-        img="/img/helpicam-01.jpg"
+        img="img/helpicam-01.jpg"
         alt="Helpicam app preview"
         title="Helpicam"
         label="Square & Flat"
@@ -149,7 +149,7 @@ export default function Home() {
         href="/helpicam"
       />
       <CaseStudy
-        img="/img/outsourcing-guide-01.jpg"
+        img="img/outsourcing-guide-01.jpg"
         alt="Outsourcing guide preview"
         title="Outsourcing Guide"
         label="Square & Creative"
@@ -158,7 +158,7 @@ export default function Home() {
         reverse
       />
       <CaseStudy
-        img="/img/asper-01.jpg"
+        img="img/asper-01.jpg"
         alt="Asper Brothers website preview"
         title="Asper Brothers"
         label="Square & Minimalistic"
@@ -166,7 +166,7 @@ export default function Home() {
         href="/asperbrothers"
       />
       <CaseStudy
-        img="/img/mybank-01.jpg"
+        img="img/mybank-01.jpg"
         alt="MyBank app preview"
         title="MyBank"
         label="Flat"
@@ -226,9 +226,9 @@ export default function Home() {
             <h3 className="h2">Collaborations</h3>
             <p className="lead">&nbsp;</p>
             <ul className="list-inline list-inline--images">
-              <li data-tooltip="Berlin Brands Group"><a href="https://www.berlin-brands-group.com/en" target="_blank"><img alt="Berlin Brands Group logo" src="/img/berlin-brands-group.png" /></a></li>
-              <li data-tooltip="Altroconsumo Edizioni"><a href="https://www.altroconsumo.it/" target="_blank"><img alt="Altroconsumo logo" src="/img/altroconsumo.png" /></a></li>
-              <li data-tooltip="Asper Brothers Software House"><a href="https://asperbrothers.com/" target="_blank"><img alt="Asper Brothers logo" src="/img/asperbrothers.png" /></a></li>
+              <li data-tooltip="Berlin Brands Group"><a href="https://www.berlin-brands-group.com/en" target="_blank"><img alt="Berlin Brands Group logo" src="img/berlin-brands-group.png" /></a></li>
+              <li data-tooltip="Altroconsumo Edizioni"><a href="https://www.altroconsumo.it/" target="_blank"><img alt="Altroconsumo logo" src="img/altroconsumo.png" /></a></li>
+              <li data-tooltip="Asper Brothers Software House"><a href="https://asperbrothers.com/" target="_blank"><img alt="Asper Brothers logo" src="img/asperbrothers.png" /></a></li>
             </ul>
           </div></div>
         </div>

@@ -1,5 +1,5 @@
 // src/components/Hero.tsx
-import { ReactNode } from 'react'
+import { ReactNode, CSSProperties } from 'react'
 import { asset } from '../lib/asset'
 
 type HeroProps = {
@@ -13,9 +13,18 @@ type HeroProps = {
 }
 
 export default function Hero({ bg, alt, overlay = 0, kenBurns = true, className = '', children }: HeroProps) {
+  const bgUrl = asset(bg)
+  const holderStyle: CSSProperties = {
+    backgroundImage: `url(${bgUrl})`,
+    opacity: 1,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }
+
   return (
     <section className={`imagebg ${className}`} {...(overlay ? { 'data-overlay': overlay } : {})}>
-      <div className="background-image-holder">
+      <div className="background-image-holder" style={holderStyle} aria-label={alt} role="img">
         <img src={asset(bg)} alt={alt} />
       </div>
       {children && <div className="container">{children}</div>}
