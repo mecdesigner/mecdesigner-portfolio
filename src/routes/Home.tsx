@@ -18,7 +18,7 @@ export default function Home() {
       </Helmet>
 
       <Hero
-        bg="{asset('img/rayi-christian-wicaksono-366.jpg')}"
+        bg={asset('img/rayi-christian-wicaksono-366.jpg')}
         alt="My desk in black and white"
         overlay={1}
         heightClass="height-50"
