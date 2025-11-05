@@ -15382,6 +15382,12 @@ form[action*='list-manage.com'] .small-meta {
   .bar.pos-fixed.bg--dark {
     background: #393e40;
   }
+  footer .logo-dark {
+    display: inline-block;
+  }
+  footer .logo-light {
+    display: none;
+  }
 }
 @media all and (max-width: 767px) {
   .bar__module {
