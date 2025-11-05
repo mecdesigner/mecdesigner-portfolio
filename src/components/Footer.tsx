@@ -5,7 +5,8 @@ export default function Footer() {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <img alt="Mecdesigner logo" className="logo" src="/img/logo-mecdesigner-dark.png" />
+            <img className="logo logo-dark" alt="Mecdesigner logo dark" src="img/logo-mecdesigner-dark.png" />
+            <img className="logo logo-light" alt="Mecdesigner logo light" src="img/logo-mecdesigner-light.png" />
             <ul className="list-inline list--hover">
               <li className="list-inline-item"><a href="/about"><span className="type--fine-print">About</span></a></li>
               <li className="list-inline-item"><a href="mailto:info@mecdesigner.com"><span className="type--fine-print">info@mecdesigner.com</span></a></li>
