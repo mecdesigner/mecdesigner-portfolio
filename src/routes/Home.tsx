@@ -54,10 +54,10 @@ export default function Home() {
 
               {/* Social */}
               <ul className="social-list list-inline list--hover">
-                <li><a href="https://it.linkedin.com/in/mecdesigner" aria-label="LinkedIn profile" target="_blank"><IconBrandLinkedin size={20} stroke={1.75} /></a></li>
-                <li><a href="https://wellfound.com/u/andrea-mecenero" aria-label="Wellfound profile" target="_blank"><IconMapWest size={20} stroke={1.75} /></a></li>
-                <li data-tooltip="@andreamecenero"><a href="https://medium.com/@andreamecenero" aria-label="Medium profile" target="_blank"><IconBrandMedium size={20} stroke={1.75} /></a></li>
-                <li data-tooltip="@mecdesigner"><a href="https://www.behance.net/mecdesigner" aria-label="Behance profile" target="_blank"><IconBrandBehance size={20} stroke={1.75} /></a></li>
+                <li data-tooltip="LinkedIn"><a href="https://it.linkedin.com/in/mecdesigner" aria-label="LinkedIn profile" target="_blank"><IconBrandLinkedin size={20} stroke={1.75} /></a></li>
+                <li data-tooltip="Wellfound"><a href="https://wellfound.com/u/andrea-mecenero" aria-label="Wellfound profile" target="_blank"><IconMapWest size={20} stroke={1.75} /></a></li>
+                <li data-tooltip="Medium"><a href="https://medium.com/@andreamecenero" aria-label="Medium profile" target="_blank"><IconBrandMedium size={20} stroke={1.75} /></a></li>
+                <li data-tooltip="Behance"><a href="https://www.behance.net/mecdesigner" aria-label="Behance profile" target="_blank"><IconBrandBehance size={20} stroke={1.75} /></a></li>
               </ul>
             </div>
           </div>
