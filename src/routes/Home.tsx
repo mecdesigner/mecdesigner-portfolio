@@ -1,9 +1,7 @@
-import { Helmet } from 'react-helmet-async'
 import { TypeAnimation } from 'react-type-animation';
 import Hero from '../components/Hero'
 import CaseStudy from '../components/CaseStudy'
 import SEO from '../components/SEO'
-import { asset } from '../lib/asset'
 import { IconBrandLinkedin, IconBrandMedium, IconBrandBehance, IconMapWest, IconMail } from '@tabler/icons-react'
 
 export default function Home() {
@@ -26,7 +24,7 @@ export default function Home() {
         alt="My desk in black and white"
         overlay={1}
         heightClass="height-50"
-        kenBurns
+        kenBurns={true}
       />
       
       {/* Intro */}

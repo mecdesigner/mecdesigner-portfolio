@@ -12,7 +12,7 @@ type HeroProps = {
   children?: ReactNode
 }
 
-export default function Hero({ bg, alt, overlay = 0, kenBurns = true, className = '', children }: HeroProps) {
+export default function Hero({ bg, alt, overlay = 0, kenBurns, className = '', children }: HeroProps) {
   const bgUrl = asset(bg)
   const holderStyle: CSSProperties = {
     backgroundImage: `url(${bgUrl})`,
