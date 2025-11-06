@@ -17,7 +17,7 @@ export default function Home() {
         locale="en_US"
         siteName="Freelance UX UI Designer - Andrea Mecenero"
         twitterSite="@andreamecenero"
-        gaId="UA-7609930-1"      // or GA4: 'G-XXXX' (recommended going forward)
+        gaId="G-4Y3P12BH9K"      // or GA4: 'G-XXXX' (recommended going forward)
         clarityId="td9hy31rz7"
       />
       
