@@ -3,6 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 import Hero from '../components/Hero'
 import CaseStudy from '../components/CaseStudy'
 import { asset } from '../lib/asset'
+import { IconBrandLinkedin, IconBrandMedium, IconBrandBehance, IconMapWest, IconMail } from '@tabler/icons-react'
 
 export default function Home() {
   return (
@@ -53,10 +54,10 @@ export default function Home() {
 
               {/* Social */}
               <ul className="social-list list-inline list--hover">
-                <li><a href="https://it.linkedin.com/in/mecdesigner" aria-label="LinkedIn profile" target="_blank"><i className="socicon socicon-linkedin icon icon--xs" aria-hidden="true"></i></a></li>
-                <li><a href="https://angel.co/u/andrea-mecenero" aria-label="AngelList profile" target="_blank"><i className="socicon socicon-angellist icon icon--xs" aria-hidden="true"></i></a></li>
-                <li data-tooltip="@andreamecenero"><a href="https://medium.com/@andreamecenero" aria-label="Medium profile" target="_blank"><i className="socicon socicon-medium icon icon--xs" aria-hidden="true"></i></a></li>
-                <li data-tooltip="@mecdesigner"><a href="https://www.behance.net/mecdesigner" aria-label="Behance profile" target="_blank"><i className="socicon socicon-behance icon icon--xs" aria-hidden="true"></i></a></li>
+                <li><a href="https://it.linkedin.com/in/mecdesigner" aria-label="LinkedIn profile" target="_blank"><IconBrandLinkedin size={20} stroke={1.75} /></a></li>
+                <li><a href="https://wellfound.com/u/andrea-mecenero" aria-label="Wellfound profile" target="_blank"><IconMapWest size={20} stroke={1.75} /></a></li>
+                <li data-tooltip="@andreamecenero"><a href="https://medium.com/@andreamecenero" aria-label="Medium profile" target="_blank"><IconBrandMedium size={20} stroke={1.75} /></a></li>
+                <li data-tooltip="@mecdesigner"><a href="https://www.behance.net/mecdesigner" aria-label="Behance profile" target="_blank"><IconBrandBehance size={20} stroke={1.75} /></a></li>
               </ul>
             </div>
           </div>
