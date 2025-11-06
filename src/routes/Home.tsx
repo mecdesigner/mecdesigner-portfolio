@@ -2,22 +2,25 @@ import { Helmet } from 'react-helmet-async'
 import { TypeAnimation } from 'react-type-animation';
 import Hero from '../components/Hero'
 import CaseStudy from '../components/CaseStudy'
+import SEO from '../components/SEO'
 import { asset } from '../lib/asset'
 import { IconBrandLinkedin, IconBrandMedium, IconBrandBehance, IconMapWest, IconMail } from '@tabler/icons-react'
 
 export default function Home() {
   return (
     <>
-      <Helmet>
-      <title>UI UX | Andrea Mecenero: Design System Expert & Consultant</title>
-        <link rel="canonical" href="https://mecdesigner.com/" />
-        <meta
-          name="description"
-          content="Andrea Mecenero is a freelance UI & UX, design system expert working remotely. Over 10 years of experience as consultant designing Web Apps. Available for hire."
-        />
-        {/* OG/Twitter tags can be added here too */}
-      </Helmet>
-
+      <SEO
+        title="UI UX | Andrea Mecenero: Design System Expert & Consultant"
+        description="Andrea Mecenero is a freelance UI & UX, design system expert working remotely. Over 10 years of experience as consultant designing Web Apps. Available for hire."
+        url="https://mecdesigner.com/"                            // your canonical
+        image="https://mecdesigner.com/img/image-social.jpg"      // absolute OG image
+        locale="en_US"
+        siteName="Freelance UX UI Designer - Andrea Mecenero"
+        twitterSite="@andreamecenero"
+        gaId="UA-7609930-1"      // or GA4: 'G-XXXX' (recommended going forward)
+        clarityId="td9hy31rz7"
+      />
+      
       <Hero
         bg="img/rayi-christian-wicaksono-366.jpg"
         alt="My desk in black and white"
