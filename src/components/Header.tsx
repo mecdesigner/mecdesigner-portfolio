@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import { IconChevronDown } from '@tabler/icons-react'
 
 const base = import.meta.env.BASE_URL
 const href = (p: string) => `${base}${p.replace(/^\/+/, '')}`
@@ -6,7 +7,7 @@ const href = (p: string) => `${base}${p.replace(/^\/+/, '')}`
 export default function Header() {
   return (
     <header className="nav-container">
-      <nav id="menu1" className="bar bar--sm bar-1 pos-fixed original--bg">
+      <nav id="menu1" className="bar bar--md bar-1 pos-fixed original--bg">
         <div className="container">
           <div className="row">
             <div className="col-lg-2 col-md-2">
@@ -34,7 +35,9 @@ export default function Header() {
                   {/* CASE STUDIES (mega dropdown) */}
                   <li className="dropdown dropdown--hover">
                     {/* Make trigger focusable for keyboard users */}
-                    <span className="dropdown__trigger" tabIndex={0}>Case studies</span>
+                    <span className="dropdown__trigger" tabIndex={0}>Case studies
+                      <IconChevronDown size={16} stroke={1.75} aria-hidden="true" style={{ marginLeft: 6 }} />
+                    </span>
 
                     <div className="dropdown__container">
                       <div className="container">
@@ -73,7 +76,9 @@ export default function Header() {
 
                   {/* CREDENTIALS (dropdown with external links) */}
                   <li className="dropdown dropdown--hover">
-                    <span className="dropdown__trigger" tabIndex={0}>Credentials</span>
+                    <span className="dropdown__trigger" tabIndex={0}>Credentials
+                      <IconChevronDown size={16} stroke={1.75} aria-hidden="true" style={{ marginLeft: 6 }} />
+                    </span>
 
                     <div className="dropdown__container">
                       <div className="container">
@@ -102,10 +107,10 @@ export default function Header() {
                     </div>
                   </li>
                 </ul>
-                
+
               </div>
               <div className="bar__module">
-                <a className="btn btn--sm btn--primary type--uppercase" href="mailto:info@mecdesigner.com?subject=Hello I want a free consultation">
+                <a className="btn btn--md btn--primary type--uppercase" href="mailto:info@mecdesigner.com?subject=Hello I want a free consultation">
                   <span className="btn__text">Contact me</span>
                 </a>
               </div>

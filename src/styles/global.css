@@ -12706,6 +12706,27 @@ ul:last-child {
 .dropdown .dropdown__container .dropdown__container:before {
   height: 0;
 }
+.dropdown__container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 1000;
+  /* if your theme sets these, override: */
+  transform: none;
+}
+.menu-horizontal > li.dropdown:hover .dropdown__container,
+.menu-horizontal > li.dropdown:focus-within .dropdown__container {
+  opacity: 1;
+  pointer-events: auto;
+}
+.dropdown__container > .container,
+.dropdown__content {
+  max-width: var(--container, 1100px);
+  margin-inline: auto;
+  padding: 1rem;
+}
+.dropdown__trigger { display: inline-flex; align-items: center; gap: .35rem; }
 .dropdown .dropdown__content {
   padding: 1.85714286em;
 }
@@ -14716,6 +14737,8 @@ form[action*='list-manage.com'] .small-meta {
 /**! 34. Bars **/
 .bar {
   padding: 1.85714286em 0;
+  position: relative;
+  overflow: visible;
 }
 .bar .logo {
   margin: 0;
@@ -16328,6 +16351,7 @@ section.parallax .row .background-image-holder {
   font-weight: 600;
   letter-spacing: .5px;
 }
+.menu-horizontal > li.dropdown { position: static; }
 @media all and (min-width: 1024px) {
   .bar-1 .bar__module + .bar__module {
     margin-left: 1.85714286em;
