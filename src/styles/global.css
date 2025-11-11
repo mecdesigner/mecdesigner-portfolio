@@ -17068,9 +17068,6 @@ body.dropdowns--hover .nav-sidebar-column .dropdown:hover > .dropdown__container
 /* Nice trigger layout */
 .dropdown__trigger { display: inline-flex; align-items: center; gap: .35rem; }
 
-/* Safety breakers if your theme forces positions */
-.dropdown__container { left: 0 !important; right: 0 !important; transform: none !important; }
-
 /*! -- Stack Twitter Feeds -- */
 .tweets-feed .interact {
   display: none;
