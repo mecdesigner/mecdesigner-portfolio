@@ -1,10 +1,18 @@
+import { useRef } from 'react'
+import { useMegaPosition } from '../lib/useMegaPosition'
 import { Link, NavLink } from 'react-router-dom'
 import { IconChevronDown } from '@tabler/icons-react'
+import { asset } from '../lib/asset'
 
 const base = import.meta.env.BASE_URL
 const href = (p: string) => `${base}${p.replace(/^\/+/, '')}`
 
 export default function Header() {
+  // refs for the two mega menus
+  const caseStudiesRef = useRef<HTMLDivElement>(null)
+  const credentialsRef  = useRef<HTMLDivElement>(null)
+  useMegaPosition(caseStudiesRef)
+  useMegaPosition(credentialsRef)
   return (
     <header className="nav-container">
       <nav id="menu1" className="bar bar--md bar-1 pos-fixed original--bg">
@@ -34,12 +42,12 @@ export default function Header() {
 
                   {/* CASE STUDIES (mega dropdown) */}
                   <li className="dropdown dropdown--hover">
-                    {/* Make trigger focusable for keyboard users */}
-                    <span className="dropdown__trigger" tabIndex={0}>Case studies
+                    <span className="dropdown__trigger" tabIndex={0}>
+                      Case studies
                       <IconChevronDown size={16} stroke={1.75} aria-hidden="true" style={{ marginLeft: 6 }} />
                     </span>
 
-                    <div className="dropdown__container">
+                    <div className="dropdown__container" ref={caseStudiesRef}>
                       <div className="container">
                         <div className="row">
                           <div className="dropdown__content row w-100">
@@ -76,11 +84,12 @@ export default function Header() {
 
                   {/* CREDENTIALS (dropdown with external links) */}
                   <li className="dropdown dropdown--hover">
-                    <span className="dropdown__trigger" tabIndex={0}>Credentials
+                    <span className="dropdown__trigger" tabIndex={0}>
+                      Credentials
                       <IconChevronDown size={16} stroke={1.75} aria-hidden="true" style={{ marginLeft: 6 }} />
                     </span>
 
-                    <div className="dropdown__container">
+                    <div className="dropdown__container" ref={credentialsRef}>
                       <div className="container">
                         <div className="row">
                           <div className="dropdown__content row w-100">

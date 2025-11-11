@@ -17039,38 +17039,31 @@ body.dropdowns--hover .nav-sidebar-column .dropdown:hover > .dropdown__container
   }
 }
 
-/* The nav's inner container becomes the positioning context */
+/* The grid container inside the bar is the positioning context */
 .nav-container .bar .container { position: relative; overflow: visible; }
 
-/* Don't let the li be the anchor (too narrow / right aligned) */
-.menu-horizontal > li.dropdown { position: static; }
+/* Each dropdown positions relative to its <li>, but we compute the left offset */
+.menu-horizontal > li.dropdown { position: relative; }
 
-/* Stretch the dropdown across the nav container, just below the bar */
+/* Baseline for the container; the hook will set left/width/top */
 .dropdown__container {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  left: 0;          /* will be overwritten by the hook */
+  right: auto;
   transform: none;
-  z-index: 1000;
-  /* if your theme sets display:none initially, keep that and reveal on hover */
+  display: none;    /* keep your show/hide behavior */
 }
 
-/* Reveal */
+/* Show on hover/focus */
 .menu-horizontal > li.dropdown:hover .dropdown__container,
 .menu-horizontal > li.dropdown:focus-within .dropdown__container {
   display: block;
-  opacity: 1;
-  pointer-events: auto;
 }
 
-/* Keep inner content centered to your site width */
-.dropdown__container > .container,
-.dropdown__content {
-  max-width: var(--container, 1100px);
-  margin-inline: auto;
-  padding: 1rem;
-}
+/* Chevron + trigger nicety */
+.dropdown__trigger { display: inline-flex; align-items: center; gap: .35rem; }
+
 
 /* Nice trigger layout */
 .dropdown__trigger { display: inline-flex; align-items: center; gap: .35rem; }
