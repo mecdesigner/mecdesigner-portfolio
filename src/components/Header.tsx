@@ -3,6 +3,7 @@ import { useMegaPosition } from '../lib/useMegaPosition'
 import { Link, NavLink } from 'react-router-dom'
 import { IconChevronDown } from '@tabler/icons-react'
 import { asset } from '../lib/asset'
+import CTA from '../components/CTA'
 
 const base = import.meta.env.BASE_URL
 const href = (p: string) => `${base}${p.replace(/^\/+/, '')}`
@@ -118,11 +119,14 @@ export default function Header() {
                 </ul>
 
               </div>
-              <div className="bar__module">
+              {/*<div className="bar__module">
                 <a className="btn btn--md btn--primary type--uppercase" href="mailto:info@mecdesigner.com?subject=Hello I want a free consultation">
                   <span className="btn__text">Contact me</span>
                 </a>
-              </div>
+              </div>*/}
+              <CTA href="https://calendly.com/andreamecenero/intro-call" size="lg" upper>
+                Book a free consultation
+              </CTA>
             </div>
           </div>
         </div>

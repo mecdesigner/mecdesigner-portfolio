@@ -20881,3 +20881,53 @@ footer.footer-7 {
   }
 }
 
+/* Scope to CTA buttons only */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  border-radius: 999px;          /* keeps your pill look */
+  will-change: transform;
+}
+
+/* Arrow nudge on hover */
+.btn-cta .btn__arrow { transition: transform .18s ease; }
+.btn-cta:hover .btn__arrow { transform: translateX(4px); }
+
+/* Dot (ping) */
+.btn-cta .btn__dot {
+  width: .55rem; height: .55rem;
+  border-radius: 999px;
+  background: currentColor;
+  position: relative;
+  opacity: .95;
+  isolation: isolate;
+}
+.btn-cta .btn__dot::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  background: currentColor;
+  opacity: .35;
+  animation: btncta-ping 1.6s infinite ease-out;
+}
+@keyframes btncta-ping {
+  0%   { transform: scale(1);   opacity: .35; }
+  70%  { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-cta .btn__dot::after { animation: none; opacity: .25; }
+}
+
+/* Optional: a “ghost” style if your theme doesn’t have one */
+.btn--ghost {
+  background: transparent;
+  color: currentColor;
+  border: 1px solid currentColor;
+}
+.btn--ghost:hover {
+  background: color-mix(in oklab, currentColor 12%, transparent);
+}
