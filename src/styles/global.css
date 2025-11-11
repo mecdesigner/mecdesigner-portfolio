@@ -12706,20 +12706,6 @@ ul:last-child {
 .dropdown .dropdown__container .dropdown__container:before {
   height: 0;
 }
-.dropdown__container { left: 0 !important; right: 0 !important; transform: none !important; }
-
-.menu-horizontal > li.dropdown:hover .dropdown__container,
-.menu-horizontal > li.dropdown:focus-within .dropdown__container {
-  opacity: 1;
-  pointer-events: auto;
-}
-.dropdown__container > .container,
-.dropdown__content {
-  max-width: var(--container, 1100px);
-  margin-inline: auto;
-  padding: 1rem;
-}
-.dropdown__trigger { display: inline-flex; align-items: center; gap: .35rem; }
 .dropdown .dropdown__content {
   padding: 1.85714286em;
 }
@@ -17052,6 +17038,46 @@ body.dropdowns--hover .nav-sidebar-column .dropdown:hover > .dropdown__container
     height: 18px;
   }
 }
+
+/* The nav's inner container becomes the positioning context */
+.nav-container .bar .container { position: relative; overflow: visible; }
+
+/* Don't let the li be the anchor (too narrow / right aligned) */
+.menu-horizontal > li.dropdown { position: static; }
+
+/* Stretch the dropdown across the nav container, just below the bar */
+.dropdown__container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transform: none;
+  z-index: 1000;
+  /* if your theme sets display:none initially, keep that and reveal on hover */
+}
+
+/* Reveal */
+.menu-horizontal > li.dropdown:hover .dropdown__container,
+.menu-horizontal > li.dropdown:focus-within .dropdown__container {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Keep inner content centered to your site width */
+.dropdown__container > .container,
+.dropdown__content {
+  max-width: var(--container, 1100px);
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+/* Nice trigger layout */
+.dropdown__trigger { display: inline-flex; align-items: center; gap: .35rem; }
+
+/* Safety breakers if your theme forces positions */
+.dropdown__container { left: 0 !important; right: 0 !important; transform: none !important; }
+
 /*! -- Stack Twitter Feeds -- */
 .tweets-feed .interact {
   display: none;
