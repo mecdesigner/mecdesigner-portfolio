@@ -4529,20 +4529,20 @@ http://flickity.metafizzy.co
 
 /* --- mecdesigner.com/css/font-roboto.css --- */
 body{
-  font-family: 'Roboto','Verdana','Helvetica', sans-serif;
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
 .menu > li{
-	font-family: 'Roboto','Verdana','Helvetica', sans-serif;	
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;	
 }
 
 .btn,.btn__text,button{
-	font-family: 'Roboto','Verdana','Helvetica', sans-serif;
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6{
-  font-family: 'Roboto','Helvetica', sans-serif;
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
 h5{
@@ -11746,7 +11746,7 @@ a:active {
   text-decoration: underline;
 }
 .type--body-font {
-  font-family: 'Open Sans', 'Helvetica';
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 }
 /**! 03. Position **/
 body {
@@ -17431,7 +17431,7 @@ p .material-icons:first-child {
   font-weight: 600;
   border-radius: 2px;
   z-index: 2;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 }
 [data-tooltip]:not(:hover):after {
   opacity: 0;
