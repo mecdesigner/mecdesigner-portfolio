@@ -12694,7 +12694,7 @@ ul:last-child {
 .dropdown {
   position: relative;
 }
-.dropdown .dropdown__container {
+/**.dropdown .dropdown__container {
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
@@ -12702,7 +12702,7 @@ ul:last-child {
   pointer-events: none;
   position: absolute;
   z-index: 999;
-}
+}**/
 .dropdown .dropdown__container .dropdown__container:before {
   height: 0;
 }
