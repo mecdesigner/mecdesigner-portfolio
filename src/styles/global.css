@@ -12706,15 +12706,8 @@ ul:last-child {
 .dropdown .dropdown__container .dropdown__container:before {
   height: 0;
 }
-.dropdown__container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: 1000;
-  /* if your theme sets these, override: */
-  transform: none;
-}
+.dropdown__container { left: 0 !important; right: 0 !important; transform: none !important; }
+
 .menu-horizontal > li.dropdown:hover .dropdown__container,
 .menu-horizontal > li.dropdown:focus-within .dropdown__container {
   opacity: 1;
