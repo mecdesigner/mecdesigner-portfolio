@@ -20931,3 +20931,6 @@ footer.footer-7 {
 .btn--ghost:hover {
   background: color-mix(in oklab, currentColor 12%, transparent);
 }
+.btn--primary .btn__text, .btn--primary:visited .btn__text {
+  color: #393e40;
+}
