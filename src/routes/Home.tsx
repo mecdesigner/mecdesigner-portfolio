@@ -2,6 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 import Hero from '../components/Hero'
 import CaseStudy from '../components/CaseStudy'
 import SEO from '../components/SEO'
+import HeroWide from '../components/HeroWide'
 import { IconBrandLinkedin, IconBrandMedium, IconBrandBehance, IconMapWest, IconMail } from '@tabler/icons-react'
 
 export default function Home() {
@@ -19,6 +20,23 @@ export default function Home() {
         clarityId="td9hy31rz7"
       />
       
+      <HeroWide
+        bg="img/rayi-christian-wicaksono-366.jpg"
+        title={
+          <>
+            Design Systems & UX that
+            <br />turn browsers into buyers.
+          </>
+        }
+        subtitle={
+          <>
+            I design high-converting product UIs and scalable design systems.
+            10+ years shipping for e-commerce and healthtech, now focused on
+            data-informed UX with accessible, fast front-ends.
+          </>
+        }
+      />
+
       {/* Intro */}
       <section className="space--sm">
         <div className="container">

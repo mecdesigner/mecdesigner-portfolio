@@ -20939,3 +20939,41 @@ footer.footer-7 {
 .btn--primary-1 .btn__label, .btn--primary-1 .btn__arrow, .btn--primary:visited .btn__label, .btn--primary-1:visited .btn__arrow {
   color: #ffffff;
 }
+
+/* Hero layout */
+.hero--wide { padding: 6rem 0 4rem; }
+@media (min-width: 992px) { .hero--wide { padding: 8rem 0 6rem; } }
+
+/* Bigger headline & clean rhythm */
+.hero__title {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 4.5vw, 4rem);  /* scales nicely */
+}
+.hero__subtitle {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: rgba(255,255,255,.85);
+  margin: 0 0 1.5rem;
+  max-width: 56ch;
+}
+
+/* CTA row */
+.hero__ctas {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.25rem;
+}
+
+/* Social row */
+.hero__socials {
+  display: flex;
+  gap: .85rem;
+  align-items: center;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.hero__socials a { color: rgba(255,255,255,.8); }
+.hero__socials a:hover { color: #fff; }
