@@ -21,7 +21,7 @@ export default function Home() {
       />
       
       <HeroWide
-        bg="img/rayi-christian-wicaksono-366.jpg"
+        bg="img/luis-de-leon-zrw1.webp"
         title={
           <>
             Design Systems & UX that
