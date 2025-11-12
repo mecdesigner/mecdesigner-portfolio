@@ -21,6 +21,7 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
+    opacity: 1,
   }
 
   // spacing in em only
