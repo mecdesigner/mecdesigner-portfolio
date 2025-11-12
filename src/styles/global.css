@@ -12462,20 +12462,20 @@ div[data-overlay] ul {
 .btn--xs {
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: 1.39285714em;
-  padding-left: 1.39285714em;
+  padding-right: 1.2em;
+  padding-left: 1.2em;
 }
 .btn--sm {
-  padding-top: 0.30952381em;
-  padding-bottom: 0.30952381em;
-  padding-right: 1.85714286em;
-  padding-left: 1.85714286em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 .btn--lg {
-  padding-top: 0.58035714em;
-  padding-bottom: 0.58035714em;
-  padding-right: 3.48214286em;
-  padding-left: 3.48214286em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 .btn--lg .btn__text {
   font-size: 1.07142857em;

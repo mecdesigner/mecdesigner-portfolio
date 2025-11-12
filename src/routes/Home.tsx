@@ -19,14 +19,6 @@ export default function Home() {
         clarityId="td9hy31rz7"
       />
       
-      <Hero
-        bg="img/rayi-christian-wicaksono-366.jpg"
-        alt="My desk in black and white"
-        overlay={1}
-        heightClass="height-50"
-        kenBurns={true}
-      />
-      
       {/* Intro */}
       <section className="space--sm">
         <div className="container">
@@ -64,6 +56,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Hero
+        bg="img/rayi-christian-wicaksono-366.jpg"
+        alt="My desk in black and white"
+        overlay={1}
+        heightClass="height-50"
+        kenBurns={true}
+      />
+
       {/* Feature trio */}
       <section className="space--md">
         <div className="container">
