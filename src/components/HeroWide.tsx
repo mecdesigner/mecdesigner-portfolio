@@ -18,14 +18,14 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    opacity: 1,
+    opacity: .25,
   }
 
   // spacing in em only
   const sectionPad: CSSProperties = { paddingTop: '6em', paddingBottom: '4em' }
   const stackEm: CSSProperties = { marginTop: '1.5em', marginBottom: '1.5em' }
   const ctasStyle: CSSProperties = { display: 'inline-flex', gap: '0.8em', flexWrap: 'wrap', alignItems: 'center' }
-  const socialGap: CSSProperties = { marginTop: '1em', display: 'block' }
+  const socialGap: CSSProperties = { marginTop: '3em', display: 'block' }
 
   return (
     <section className="imagebg image--light" data-overlay={1} style={sectionPad}>
@@ -37,7 +37,7 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
             <h1 className="h1" style={{ marginBottom: '0.5em' }}>{title}</h1>
 
             {subtitle && (
-              <p className="lead" style={stackEm}>
+              <p className="h3" style={stackEm}>
                 {subtitle}
               </p>
             )}
@@ -55,52 +55,52 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
             </div>
 
             {/* Socials */}
-            <ul className="list-inline" style={socialGap}>
+            <ul className="list-inline social-list list--hover" style={socialGap}>
                 <li className="list-inline-item" data-tooltip="LinkedIn">
                     <a href="https://it.linkedin.com/in/mecdesigner" aria-label="LinkedIn profile" target="_blank" rel="noreferrer">
-                    <IconBrandLinkedin size={20} stroke={1.75} />
+                    <IconBrandLinkedin size={25} stroke={1.75} />
                     </a>
                 </li>
 
                 <li className="list-inline-item" data-tooltip="Wellfound">
                     <a href="https://wellfound.com/u/andrea-mecenero" aria-label="Wellfound profile" target="_blank" rel="noreferrer">
-                    <IconMapWest size={20} stroke={1.75} />
+                    <IconMapWest size={25} stroke={1.75} />
                     </a>
                 </li>
 
                 <li className="list-inline-item" data-tooltip="Medium">
                     <a href="https://medium.com/@andreamecenero" aria-label="Medium profile" target="_blank" rel="noreferrer">
-                    <IconBrandMedium size={20} stroke={1.75} />
+                    <IconBrandMedium size={25} stroke={1.75} />
                     </a>
                 </li>
 
                 <li className="list-inline-item" data-tooltip="Behance">
                     <a href="https://www.behance.net/mecdesigner" aria-label="Behance profile" target="_blank" rel="noreferrer">
-                    <IconBrandBehance size={20} stroke={1.75} />
+                    <IconBrandBehance size={25} stroke={1.75} />
                     </a>
                 </li>
 
                 <li className="list-inline-item" data-tooltip="Email">
                     <a href="mailto:info@mecdesigner.com" aria-label="Email link">
-                    <IconMail size={20} stroke={1.75} />
+                    <IconMail size={25} stroke={1.75} />
                     </a>
                 </li>
 
                 <li className="list-inline-item" data-tooltip="Fiverr">
                     <a href="https://www.fiverr.com/andreamecenero" aria-label="Fiverr profile" target="_blank" rel="noreferrer">
-                    <IconBrandFiverr size={20} stroke={1.75} />
+                    <IconBrandFiverr size={25} stroke={1.75} />
                     </a>
                 </li>
 
                 <li className="list-inline-item" data-tooltip="Upwork">
                     <a href="https://www.upwork.com/freelancers/~your-id" aria-label="Upwork profile" target="_blank" rel="noreferrer">
-                    <IconBrandUpwork size={20} stroke={1.75} />
+                    <IconBrandUpwork size={25} stroke={1.75} />
                     </a>
                 </li>
 
                 <li className="list-inline-item" data-tooltip="Toptal">
                     <a href="https://www.toptal.com/resume/your-profile" aria-label="Toptal profile" target="_blank" rel="noreferrer">
-                    <IconCircleLetterT size={20} stroke={1.75} />
+                    <IconCircleLetterT size={25} stroke={1.75} />
                     </a>
                 </li>
             </ul>
