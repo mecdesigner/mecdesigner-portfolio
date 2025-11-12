@@ -104,7 +104,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <div className="feature feature--featured boxed boxed--border">
+              <div className="feature feature--featured boxed boxed--border bg-transparent">
                 <h3 className="h2">UI Design</h3>
                 <h4 className="mb-3"><strong>Wireframing and prototyping</strong> (Figma, Adobe XD, Axure RP).</h4>
                 <h4 className="mb-3"><strong>Interaction design (IxD)</strong> and design systems.</h4>
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="feature feature--featured boxed boxed--border">
+              <div className="feature feature--featured boxed boxed--border bg-transparent">
                 <h3 className="h2">UX Design &amp; Research</h3>
                 <h4 className="mb-3"><strong>User-centered design</strong>, heuristic evaluations, A/B testing.</h4>
                 <h4 className="mb-3"><strong>Tools:</strong> Miro, FigJam, Hotjar, Microsoft Clarity.</h4>
@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           <div className="row">
             <div className="col-md-6">
-              <div className="feature feature--featured boxed boxed--border">
+              <div className="feature feature--featured boxed boxed--border bg-transparent">
                 <h3 className="h2">Web Design &amp; Dev</h3>
                 <h4 className="mb-3"><strong>Responsive, WCAG-compliant layouts</strong> (HTML, CSS).</h4>
                 <h4 className="mb-3"><strong>Agile management</strong> with Jira, Asana, Confluence.</h4>
@@ -130,7 +130,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="feature feature--featured boxed boxed--border">
+              <div className="feature feature--featured boxed boxed--border bg-transparent">
                 <h3 className="h2">Web Design &amp; Dev</h3>
                 <h4 className="mb-3"><strong>Responsive, WCAG-compliant layouts</strong> (HTML, CSS).</h4>
                 <h4 className="mb-3"><strong>Agile management</strong> with Jira, Asana, Confluence.</h4>
