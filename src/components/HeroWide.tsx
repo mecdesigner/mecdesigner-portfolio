@@ -86,20 +86,20 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
                     </a>
                 </li>
 
-                <li className="list-inline-item" data-tooltip="Fiverr">
-                    <a href="https://www.fiverr.com/andreamecenero" aria-label="Fiverr profile" target="_blank" rel="noreferrer">
-                    <IconBrandFiverr size={25} stroke={1.75} />
-                    </a>
-                </li>
-
                 <li className="list-inline-item" data-tooltip="Upwork">
-                    <a href="https://www.upwork.com/freelancers/~your-id" aria-label="Upwork profile" target="_blank" rel="noreferrer">
+                    <a href="https://www.upwork.com/freelancers/~011d35bf594a0aaef9?mp_source=share" aria-label="Upwork profile" target="_blank" rel="noreferrer">
                     <IconBrandUpwork size={25} stroke={1.75} />
                     </a>
                 </li>
 
+                <li className="list-inline-item" data-tooltip="Fiverr">
+                    <a href="https://www.fiverr.com/s/rE8jdXb" aria-label="Fiverr profile" target="_blank" rel="noreferrer">
+                    <IconBrandFiverr size={25} stroke={1.75} />
+                    </a>
+                </li>
+
                 <li className="list-inline-item" data-tooltip="Toptal">
-                    <a href="https://www.toptal.com/resume/your-profile" aria-label="Toptal profile" target="_blank" rel="noreferrer">
+                    <a href="#" aria-label="Toptal profile" target="_blank" rel="noreferrer">
                     <IconCircleLetterT size={25} stroke={1.75} />
                     </a>
                 </li>
