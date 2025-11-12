@@ -1,7 +1,7 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useMegaPosition } from '../lib/useMegaPosition'
 import { Link, NavLink } from 'react-router-dom'
-import { IconChevronDown } from '@tabler/icons-react'
+import { IconChevronDown, IconMenu2, IconX } from '@tabler/icons-react'
 import { asset } from '../lib/asset'
 import CTA from '../components/CTA'
 
@@ -9,6 +9,7 @@ const base = import.meta.env.BASE_URL
 const href = (p: string) => `${base}${p.replace(/^\/+/, '')}`
 
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false)
   // refs for the two mega menus
   const caseStudiesRef = useRef<HTMLDivElement>(null)
   const credentialsRef  = useRef<HTMLDivElement>(null)
@@ -16,19 +17,42 @@ export default function Header() {
   useMegaPosition(credentialsRef)
   return (
     <header className="nav-container">
-      <nav id="menu1" className="bar bar--sm bar-1 pos-fixed original--bg">
+      <nav id="menu1" 
+      className={`bar bar--sm bar-1 pos-fixed original--bg ${mobileOpen ? 'is-open' : ''}`}
+      aria-label="Main"
+      >
         <div className="container">
-          <div className="row">
+          <div className="row align-items-center">
             <div className="col-lg-2 col-md-2">
               <div className="bar__module">
-                <Link to="/">
+                <Link to="/" aria-label="Home">
                   <img className="logo logo-dark" alt="Mecdesigner logo dark" src="img/logo-mecdesigner-dark.png" />
                   <img className="logo logo-light" alt="Mecdesigner logo light" src="img/logo-mecdesigner-light.png" />
                 </Link>
               </div>
             </div>
+
+            {/* Toggle (mobile only) */}
+            <div className="col-lg-10 col-md-10 text-right d-lg-none">
+              <button
+                className="nav-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded={mobileOpen}
+                aria-controls="primary-menu"
+                onClick={() => setMobileOpen(v => !v)}
+              >
+                {mobileOpen ? <IconX size={22} stroke={1.8} /> : <IconMenu2 size={22} stroke={1.8} />}
+              </button>
+            </div>
+
+            {/* Menu + CTA */}
             <div className="col-lg-10 col-md-12 text-right text-left-xs text-left-sm">
-              <div className="bar__module">
+              <div
+                  id="primary-menu"
+                  className="bar__module nav-menu"
+                  aria-hidden={!mobileOpen}
+                >
 
                 <ul className="menu-horizontal text-left">
                   <li>
