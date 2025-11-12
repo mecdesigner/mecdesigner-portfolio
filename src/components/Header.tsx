@@ -16,7 +16,7 @@ export default function Header() {
   useMegaPosition(credentialsRef)
   return (
     <header className="nav-container">
-      <nav id="menu1" className="bar bar--md bar-1 pos-fixed original--bg">
+      <nav id="menu1" className="bar bar--sm bar-1 pos-fixed original--bg">
         <div className="container">
           <div className="row">
             <div className="col-lg-2 col-md-2">
@@ -124,8 +124,12 @@ export default function Header() {
                   <span className="btn__text">Contact me</span>
                 </a>
               </div>*/}
-              <CTA href="https://calendly.com/andreamecenero/intro-call" size="lg" upper>
-                Book a free consultation
+              <CTA
+                href="https://calendly.com/andreamecenero/intro-call"
+                style="primary-1"
+                size="lg"
+                upper>
+                Free consultation
               </CTA>
             </div>
           </div>
