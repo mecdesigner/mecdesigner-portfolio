@@ -13171,6 +13171,7 @@ div.recaptcha iframe {
   overflow: hidden;
   padding: 2.78571429em;
   margin-bottom: 30px;
+  background-image: radial-gradient(circle, #FFFFFF 0, #EEEEEE 100%);
 }
 .boxed.boxed--lg {
   padding: 2.78571429em;

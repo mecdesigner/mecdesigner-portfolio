@@ -94,7 +94,7 @@ export default function Header() {
                       <div className="container">
                         <div className="row">
                           <div className="dropdown__content row w-100">
-                            <div className="col-md-6 col-sm-12">
+                            <div className="col-md-4 col-sm-12">
                               <h5>Articles</h5>
                               <ul className="menu-vertical">
                                 <li><a href="https://medium.com/@andreamecenero/a-story-about-ux-analysis-4dd019f557c9" target="_blank" rel="noreferrer">&#128210; A story about UX Analysis</a></li>
@@ -105,10 +105,20 @@ export default function Header() {
                               </ul>
                             </div>
 
-                            <div className="col-md-6 col-sm-12">
+                            <div className="col-md-4 col-sm-12">
                               <h5>Certificates</h5>
                               <ul className="menu-vertical">
                                 <li><a href="https://www.credly.com/users/andrea-mecenero" target="_blank" rel="noreferrer">&#128220; Credly Dashboard</a></li>
+                              </ul>
+                            </div>
+
+                            <div className="col-md-4 col-sm-12">
+                              <h5>Social</h5>
+                              <ul className="menu-vertical">
+                                <li><a href="https://www.credly.com/users/andrea-mecenero" target="_blank" rel="noreferrer">&#128220; LinkedIn</a></li>
+                                <li><a href="https://www.credly.com/users/andrea-mecenero" target="_blank" rel="noreferrer">&#128220; UpWork</a></li>
+                                <li><a href="https://www.credly.com/users/andrea-mecenero" target="_blank" rel="noreferrer">&#128220; Fiverr</a></li>
+                                <li><a href="https://www.credly.com/users/andrea-mecenero" target="_blank" rel="noreferrer">&#128220; Toptal</a></li>
                               </ul>
                             </div>
                           </div>

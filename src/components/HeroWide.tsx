@@ -37,9 +37,9 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
             <h1 className="h1" style={{ marginBottom: '0.5em' }}>{title}</h1>
 
             {subtitle && (
-              <p className="h3" style={stackEm}>
+              <h2 className="h3" style={stackEm}>
                 {subtitle}
-              </p>
+              </h2>
             )}
 
             <div style={ctasStyle}>

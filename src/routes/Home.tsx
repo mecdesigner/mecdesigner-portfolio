@@ -31,9 +31,7 @@ export default function Home() {
         }
         subtitle={
           <>
-            I design high-converting product UIs and scalable design systems.
-            10+ years shipping for e-commerce and healthtech, now focused on
-            data-informed UX with accessible, fast front-ends.
+            With <strong>10+ years</strong> driving results for medium to large companies, I design intuitive, high-converting product UIs and robust <strong>design systems</strong>. Specializing in data-informed UX, I deliver <strong>accessible</strong>, fast front-ends backed by meticulous design thinking.
             <br />
             Let's have a talk about {' '}
             <span className="typed-text typed-text--cursor type--bold">
@@ -55,7 +53,7 @@ export default function Home() {
         }
       />
 
-      {/* Intro */}
+      {/*
       <section className="space--sm">
         <div className="container">
           <div className="row">
@@ -81,7 +79,7 @@ export default function Home() {
                 </span>
               </h2>
 
-              {/* Social */}
+
               <ul className="social-list list-inline list--hover">
                 <li data-tooltip="LinkedIn"><a href="https://it.linkedin.com/in/mecdesigner" aria-label="LinkedIn profile" target="_blank"><IconBrandLinkedin size={20} stroke={1.75} /></a></li>
                 <li data-tooltip="Wellfound"><a href="https://wellfound.com/u/andrea-mecenero" aria-label="Wellfound profile" target="_blank"><IconMapWest size={20} stroke={1.75} /></a></li>
@@ -91,15 +89,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> * Intro */}
 
-      <Hero
+      {/* <Hero
         bg="img/rayi-christian-wicaksono-366.jpg"
         alt="My desk in black and white"
         overlay={1}
         heightClass="height-50"
         kenBurns={true}
-      />
+    /> */}
 
       {/* Feature trio */}
       <section className="space--md">
@@ -107,26 +105,26 @@ export default function Home() {
           <div className="row">
             <div className="col-md-4">
               <div className="feature feature--featured boxed boxed--border">
-                <h3>UI Design</h3>
-                <p className="mb-3"><strong>Wireframing and prototyping</strong> (Figma, Adobe XD, Axure RP).</p>
-                <p className="mb-3"><strong>Interaction design (IxD) and design systems.</strong></p>
-                <p className="mb-3"><strong>Collaboration with front-end</strong> (Bootstrap, Material Design).</p>
+                <h3 className="h2">UI Design</h3>
+                <h4 className="mb-3"><strong>Wireframing and prototyping</strong> (Figma, Adobe XD, Axure RP).</h4>
+                <h4 className="mb-3"><strong>Interaction design (IxD) and design systems.</strong></h4>
+                <h4 className="mb-3"><strong>Collaboration with front-end</strong> (Bootstrap, Material Design).</h4>
               </div>
             </div>
             <div className="col-md-4">
               <div className="feature feature--featured boxed boxed--border">
-                <h3>UX Design &amp; Research</h3>
-                <p className="mb-3"><strong>User-centered design, heuristic evaluations, A/B testing.</strong></p>
-                <p className="mb-3"><strong>Tools:</strong> Miro, FigJam, Hotjar, Microsoft Clarity.</p>
-                <p className="mb-3"><strong>Translating user insights into product improvements.</strong></p>
+                <h3 className="h2">UX Design &amp; Research</h3>
+                <h4 className="mb-3"><strong>User-centered design, heuristic evaluations, A/B testing.</strong></h4>
+                <h4 className="mb-3"><strong>Tools:</strong> Miro, FigJam, Hotjar, Microsoft Clarity.</h4>
+                <h4 className="mb-3"><strong>Translating user insights into product improvements.</strong></h4>
               </div>
             </div>
             <div className="col-md-4">
               <div className="feature feature--featured boxed boxed--border">
-                <h3>Web Design &amp; Dev</h3>
-                <p className="mb-3"><strong>Responsive, WCAG-compliant layouts</strong> (HTML, CSS).</p>
-                <p className="mb-3"><strong>Agile management</strong> with Jira, Asana, Confluence.</p>
-                <p className="mb-3"><strong>Performance optimization and CRO best practices.</strong></p>
+                <h3 className="h2">Web Design &amp; Dev</h3>
+                <h4 className="mb-3"><strong>Responsive, WCAG-compliant layouts</strong> (HTML, CSS).</h4>
+                <h4 className="mb-3"><strong>Agile management</strong> with Jira, Asana, Confluence.</h4>
+                <h4 className="mb-3"><strong>Performance optimization and CRO best practices.</strong></h4>
               </div>
             </div>
           </div>
