@@ -23,7 +23,7 @@ export default function Header() {
       >
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-2 col-md-2">
+            <div className="col-lg-2 col-md-6 col-6">
               <div className="bar__module">
                 <Link to="/" aria-label="Home">
                   <img className="logo logo-dark" alt="Mecdesigner logo dark" src="img/logo-mecdesigner-dark.png" />
@@ -33,7 +33,7 @@ export default function Header() {
             </div>
 
             {/* Toggle (mobile only) */}
-            <div className="col-lg-10 col-md-10 text-right d-lg-none">
+            <div className="col-lg-10 col-md-6 col-6 text-right">
             <button
                 className="nav-toggle btn btn--sm btn--ghost"
                 type="button"
