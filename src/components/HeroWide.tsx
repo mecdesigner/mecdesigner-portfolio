@@ -15,8 +15,9 @@ type Props = {
 }
 
 export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: Props) {
-  const holder: CSSProperties = {
-    backgroundImage: `url(${asset(bg)})`,
+    const bgUrl = asset(bg)
+    const holderStyle: CSSProperties = {
+    backgroundImage: `url(${bgUrl})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -24,7 +25,7 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
 
   return (
     <section className="hero hero--wide imagebg" data-overlay={1}>
-      <div className="background-image-holder" style={holder} aria-hidden="true" />
+      <div className="background-image-holder" style={holderStyle} aria-hidden="true" />
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-10 col-lg-8">
@@ -34,23 +35,14 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
             {subtitle && <p className="hero__subtitle">{subtitle}</p>}
 
             <div className="hero__ctas">
-              <CTA
-                href="https://calendly.com/andreamecenero/intro-call"
-                size="lg"
-                style="primary-1"
-                upper
-                dotColor={dotColor}
-              >
-                Book a free consultation
-              </CTA>
-
+              <span>Contact me at </span>
               <CTA
                 href="mailto:info@mecdesigner.com?subject=Project inquiry"
                 size="lg"
                 style="ghost"
                 dotColor={dotColor}
               >
-                Email me
+                info@mecdesigner.com
               </CTA>
             </div>
 
