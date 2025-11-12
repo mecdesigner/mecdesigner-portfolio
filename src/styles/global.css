@@ -13171,7 +13171,10 @@ div.recaptcha iframe {
   overflow: hidden;
   padding: 2.78571429em;
   margin-bottom: 30px;
-  background-image: url("img/shadow-box1-6914bbc61b0fa.webp") radial-gradient(circle, #FFFFFF 0, #EEEEEE 100%);
+  background-image: url("../../public/img/shadow-box1-6914bbc61b0fa.webp") radial-gradient(circle, #FFFFFF 0, #EEEEEE 90%);
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40em auto, cover; 
 }
 .boxed.boxed--lg {
   padding: 2.78571429em;
