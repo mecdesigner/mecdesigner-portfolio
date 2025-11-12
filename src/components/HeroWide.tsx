@@ -46,7 +46,7 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
               <span>Contact me at</span>
               <CTA
                 href="mailto:info@mecdesigner.com?subject=Project%20inquiry"
-                size="lg"
+                size="sm"
                 style="ghost"
                 dotColor={dotColor}
               >

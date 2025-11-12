@@ -24,8 +24,9 @@ export default function Home() {
         bg="img/luis-de-leon-zrw1.webp"
         title={
           <>
-            Design Systems & UX that
-            <br />turn browsers into buyers.
+            UI & UX Expert
+            <br />
+            specializing in design systems.
           </>
         }
         subtitle={
@@ -33,6 +34,23 @@ export default function Home() {
             I design high-converting product UIs and scalable design systems.
             10+ years shipping for e-commerce and healthtech, now focused on
             data-informed UX with accessible, fast front-ends.
+            <br />
+            Let's have a talk about {' '}
+            <span className="typed-text typed-text--cursor type--bold">
+            <TypeAnimation
+              sequence={[
+                'user interface', 900,
+                'user experience', 900,
+                'design thinking', 900,
+                'human-centered design', 900,
+                'web technologies', 900,
+              ]}
+              wrapper="span"
+              speed={55}
+              repeat={Infinity}
+              cursor={true}
+            />
+            </span>
           </>
         }
       />

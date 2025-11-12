@@ -119,11 +119,6 @@ export default function Header() {
                 </ul>
 
               </div>
-              {/*<div className="bar__module">
-                <a className="btn btn--md btn--primary type--uppercase" href="mailto:info@mecdesigner.com?subject=Hello I want a free consultation">
-                  <span className="btn__text">Contact me</span>
-                </a>
-              </div>*/}
               <CTA
                 href="https://calendly.com/andreamecenero/intro-call"
                 style="primary-1"
