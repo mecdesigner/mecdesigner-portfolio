@@ -4,7 +4,7 @@ import { asset } from '../lib/asset'
 import CTA from './CTA'
 import {
   IconBrandLinkedin, IconBrandMedium, IconBrandBehance, IconMail,
-  IconBrandFiverr, IconBrandUpwork, IconBrandToptal
+  IconBrandFiverr, IconBrandUpwork, IconCircleLetterT
 } from '@tabler/icons-react'
 
 type Props = {
@@ -61,7 +61,7 @@ export default function HeroWide({ bg, title, subtitle, dotColor = '#e1ff00' }: 
               <li><a href="mailto:info@mecdesigner.com" aria-label="Email"><IconMail size={22} stroke={1.6} /></a></li>
               <li><a href="https://www.fiverr.com/andreamecenero" target="_blank" rel="noreferrer"><IconBrandFiverr size={22} stroke={1.6} /></a></li>
               <li><a href="https://www.upwork.com/freelancers/~your-id" target="_blank" rel="noreferrer"><IconBrandUpwork size={22} stroke={1.6} /></a></li>
-              <li><a href="https://www.toptal.com/resume/your-profile" target="_blank" rel="noreferrer"><IconBrandToptal size={22} stroke={1.6} /></a></li>
+              <li><a href="https://www.toptal.com/resume/your-profile" target="_blank" rel="noreferrer"><IconCircleLetterT size={22} stroke={1.6} /></a></li>
             </ul>
           </div>
         </div>
