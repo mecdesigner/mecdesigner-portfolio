@@ -103,7 +103,7 @@ export default function Home() {
       <section className="space--md">
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-6">
               <div className="feature feature--featured boxed boxed--border">
                 <h3 className="h2">UI Design</h3>
                 <h4 className="mb-3"><strong>Wireframing and prototyping</strong> (Figma, Adobe XD, Axure RP).</h4>
@@ -111,7 +111,7 @@ export default function Home() {
                 <h4 className="mb-3"><strong>Collaboration with front-end</strong> (Bootstrap, Material Design).</h4>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-6">
               <div className="feature feature--featured boxed boxed--border">
                 <h3 className="h2">UX Design &amp; Research</h3>
                 <h4 className="mb-3"><strong>User-centered design</strong>, heuristic evaluations, A/B testing.</h4>
@@ -119,7 +119,17 @@ export default function Home() {
                 <h4 className="mb-3"><strong>Translating user insights</strong> into product improvements.</h4>
               </div>
             </div>
-            <div className="col-md-4">
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="feature feature--featured boxed boxed--border">
+                <h3 className="h2">Web Design &amp; Dev</h3>
+                <h4 className="mb-3"><strong>Responsive, WCAG-compliant layouts</strong> (HTML, CSS).</h4>
+                <h4 className="mb-3"><strong>Agile management</strong> with Jira, Asana, Confluence.</h4>
+                <h4 className="mb-3"><strong>Performance optimization</strong> and CRO best practices.</h4>
+              </div>
+            </div>
+            <div className="col-md-6">
               <div className="feature feature--featured boxed boxed--border">
                 <h3 className="h2">Web Design &amp; Dev</h3>
                 <h4 className="mb-3"><strong>Responsive, WCAG-compliant layouts</strong> (HTML, CSS).</h4>

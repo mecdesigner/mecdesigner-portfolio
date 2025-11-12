@@ -9,7 +9,7 @@ const base = import.meta.env.BASE_URL
 const href = (p: string) => `${base}${p.replace(/^\/+/, '')}`
 
 export default function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [open, setOpen] = useState(false)
   // refs for the two mega menus
   const caseStudiesRef = useRef<HTMLDivElement>(null)
   const credentialsRef  = useRef<HTMLDivElement>(null)
@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="nav-container">
       <nav id="menu1" 
-      className={`bar bar--sm bar-1 pos-fixed original--bg ${mobileOpen ? 'is-open' : ''}`}
+      className="bar bar--sm bar-1 pos-fixed original--bg"
       aria-label="Main"
       >
         <div className="container">
@@ -34,15 +34,15 @@ export default function Header() {
 
             {/* Toggle (mobile only) */}
             <div className="col-lg-10 col-md-10 text-right d-lg-none">
-              <button
-                className="nav-toggle"
+            <button
+                className="nav-toggle btn btn--sm btn--ghost"
                 type="button"
                 aria-label="Toggle navigation"
-                aria-expanded={mobileOpen}
+                aria-expanded={open}
                 aria-controls="primary-menu"
-                onClick={() => setMobileOpen(v => !v)}
+                onClick={() => setOpen(v => !v)}
               >
-                {mobileOpen ? <IconX size={22} stroke={1.8} /> : <IconMenu2 size={22} stroke={1.8} />}
+                {open ? <IconX size={30} stroke={1.8} /> : <IconMenu2 size={30} stroke={1.8} />}
               </button>
             </div>
 
@@ -50,8 +50,7 @@ export default function Header() {
             <div className="col-lg-10 col-md-12 text-right text-left-xs text-left-sm">
               <div
                   id="primary-menu"
-                  className="bar__module nav-menu"
-                  aria-hidden={!mobileOpen}
+                  className={`bar__module collapse d-lg-block ${open ? 'show' : ''}`}
                 >
 
                 <ul className="menu-horizontal text-left">
