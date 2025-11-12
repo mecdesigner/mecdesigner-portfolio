@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './styles/reset.css'
 import './styles/global.css'
 
