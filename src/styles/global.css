@@ -20944,5 +20944,22 @@ footer.footer-7 {
   color: #ffffff;
 }
 
+/* Hamburger link appearance */
+.nav-toggle-link {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #FFFFFF; /* adjust for your theme */
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Collapse utility (if not already present) */
 .collapse { display: none; }
 .collapse.show { display: block; }
+
+/* Make CTA full width on small screens, if your btn doesn't already expand */
+@media (max-width: 990px) {
+  .bar .btn.btn--lg { display: block; width: 100%; }
+}
