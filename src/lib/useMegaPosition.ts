@@ -8,16 +8,7 @@ export function useMegaPosition(ref: RefObject<HTMLElement>) {
 
     // Match your grid breakpoint (~992px). Keep in sync with CSS (62em).
     const mq = window.matchMedia('(min-width: 991px)')
-
-    const reset = () => {
-      el.style.position = ''
-      el.style.top = ''
-      el.style.left = ''
-      el.style.right = ''
-      el.style.width = ''
-      el.style.transform = ''
-      el.style.zIndex = ''
-    }
+    const reset = () => { el.removeAttribute('style') }
 
     const update = () => {
       // If mobile / menu collapsed → let CSS handle stacking
@@ -29,30 +20,31 @@ export function useMegaPosition(ref: RefObject<HTMLElement>) {
       // Anchor: <li> that wraps the dropdown container
       const anchor = el.parentElement as HTMLElement | null
       // Full-width grid container inside the nav bar
-      const navBox = el.closest('.bar')?.querySelector('.container') as HTMLElement | null
-      if (!anchor || !navBox) {
-        reset()
-        return
-      }
+      const bar = el.closest('.bar') as HTMLElement | null
+      const grid = bar?.querySelector('.container') as HTMLElement | null
+      if (!anchor || !grid) { 
+        reset(); 
+        return 
+    }
 
       // If the menu module is collapsed (mobile), bail out
-      const module = el.closest('.bar__module') as HTMLElement | null
-      if (module && module.classList.contains('collapse') && !module.classList.contains('show')) {
+      const module = el.closest('.nav-menu-module') as HTMLElement | null
+      if (module && module.classList.contains('toggled-class') && window.matchMedia('(max-width: 990px)').matches) {
         reset()
         return
       }
 
       const a = anchor.getBoundingClientRect()
-      const n = navBox.getBoundingClientRect()
+      const g = grid.getBoundingClientRect()
 
       // Align dropdown left edge to grid left, regardless of which column the menu sits in
-      const left = n.left - a.left
+      const left = g.left - a.left
 
       el.style.position = 'absolute'
       el.style.top = `${anchor.offsetHeight}px`
       el.style.left = `${left}px`
       el.style.right = 'auto'
-      el.style.width = `${n.width}px`
+      el.style.width = `${g.width}px`
       el.style.transform = 'none'
       el.style.zIndex = '1000'
     }

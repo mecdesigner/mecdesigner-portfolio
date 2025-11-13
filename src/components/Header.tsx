@@ -1,23 +1,57 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { IconChevronDown, IconMenu2, IconX } from '@tabler/icons-react'
-import { useMegaPosition } from '../lib/useMegaPosition'
+import { IconMenu2, IconX, IconChevronDown } from '@tabler/icons-react'
 import CTA from '../components/CTA'
+import { useMegaPosition } from '../lib/useMegaPosition'
 
 const base = import.meta.env.BASE_URL
 const href = (p: string) => `${base}${p.replace(/^\/+/, '')}`
 
 export default function Header() {
   const [open, setOpen] = useState(false)
-  // refs for the two mega menus
-  const caseStudiesRef = useRef<HTMLDivElement>(null)
-  const credentialsRef  = useRef<HTMLDivElement>(null)
-  useMegaPosition(caseStudiesRef)
-  useMegaPosition(credentialsRef)
+  const [stuck, setStuck] = useState(false) // desktop-only sticky after 200px
+
+  const csRef = useRef<HTMLDivElement>(null)
+  const crRef = useRef<HTMLDivElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
+  useMegaPosition(csRef)
+  useMegaPosition(crRef)
+
+  // Desktop-only sticky toggle
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 991px)')
+    const onScroll = () => { setStuck(mq.matches && window.scrollY > 200) }
+    onScroll()
+    mq.addEventListener?.('change', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      mq.removeEventListener?.('change', onScroll)
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [])
+
+  // toggle helper for legacy class
+  const toggleMobile = () => {
+    setOpen(v => {
+      const next = !v
+      const menu = menuRef.current
+      if (menu) {
+        if (next) menu.classList.add('toggled-class')
+        else menu.classList.remove('toggled-class')
+      }
+      return next
+    })
+  }
+
+  const closeMobile = () => {
+    const menu = menuRef.current
+    if (menu) menu.classList.remove('toggled-class')
+    setOpen(false)
+  }
 
   return (
     <header className="nav-container">
-      {/* MOBILE TOP BAR: logo + hamburger inline */}
+      {/* Mobile top row: logo + hamburger inline */}
       <div className="bar bar--sm original--bg d-lg-none">
         <div className="container">
           <div className="row align-items-center">
@@ -30,7 +64,7 @@ export default function Header() {
             <div className="col-3 text-right">
               <a
                 href="#menu1"
-                className="nav-toggle-link"
+                className="hamburger-toggle toggled-class"
                 aria-label="Toggle navigation"
                 aria-controls="primary-menu"
                 aria-expanded={open}
@@ -43,12 +77,16 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MAIN BAR: desktop inline; mobile collapsible second line */}
-      <nav id="menu1" className="bar bar--sm bar-1 pos-fixed original--bg" aria-label="Main" >
+      {/* Main bar: relative initially; fixed on desktop when stuck */}
+      <nav
+        id="menu1"
+        className={`bar bar--sm bar-1 original--bg ${stuck ? 'pos-fixed' : ''}`}
+        aria-label="Main"
+      >
         <div className="container">
           <div className="row align-items-center">
-            
-            <div className="col-lg-3 d-none d-lg-block">
+            {/* Desktop logo */}
+            <div className="col-lg-2 d-none d-lg-block">
               <div className="bar__module">
                 <Link to="/" aria-label="Home">
                   <img className="logo logo-dark" alt="Mecdesigner logo dark" src="img/logo-mecdesigner-dark.png" />
@@ -57,9 +95,11 @@ export default function Header() {
               </div>
             </div>
 
-            {/* MENU (desktop inline; mobile collapsible) */}
-            <div className="col-lg-6 col-md-12">
-              <div id="primary-menu" className={`bar__module collapse d-lg-block ${open ? 'show' : ''}`}>
+            {/* Menu + CTA share the SAME column (desktop inline; mobile collapsible) */}
+            <div className="col-lg-10 col-md-12">
+              <div id="primary-menu" ref={menuRef}
+                className="bar__module nav-menu-module d-lg-flex">
+                {/* horizontal menu */}
                 <ul className="menu-horizontal text-left">
                   <li><NavLink to="/about" onClick={() => setOpen(false)}>About</NavLink></li>
                   <li><a href={href('design-system/')} onClick={() => setOpen(false)}>Design system</a></li>
@@ -69,7 +109,7 @@ export default function Header() {
                     <span className="dropdown__trigger" tabIndex={0}>
                       Case studies <IconChevronDown size={16} stroke={1.75} aria-hidden style={{ marginLeft: 6 }} />
                     </span>
-                    <div className="dropdown__container" ref={caseStudiesRef}>
+                    <div className="dropdown__container" ref={csRef}>
                       <div className="container">
                         <div className="row">
                           <div className="dropdown__content row w-100">
@@ -107,7 +147,7 @@ export default function Header() {
                     <span className="dropdown__trigger" tabIndex={0}>
                       Credentials <IconChevronDown size={16} stroke={1.75} aria-hidden style={{ marginLeft: 6 }} />
                     </span>
-                    <div className="dropdown__container" ref={credentialsRef}>
+                    <div className="dropdown__container" ref={crRef}>
                       <div className="container">
                         <div className="row">
                           <div className="dropdown__content row w-100">
@@ -125,10 +165,9 @@ export default function Header() {
                               <h5>Social</h5>
                               <ul className="menu-vertical">
                                 <li><a href="https://www.linkedin.com/in/mecdesigner/" target="_blank" rel="noreferrer">🔗 LinkedIn</a></li>
-                                <li><a href="https://wellfound.com/u/andrea-mecenero" target="_blank" rel="noreferrer">🔗 Wellfound</a></li>
                                 <li><a href="https://www.upwork.com/freelancers/~011d35bf594a0aaef9?mp_source=share" target="_blank" rel="noreferrer">🧰 Upwork</a></li>
-                                <li><a href="https://www.fiverr.com/s/rE8jdXb" target="_blank" rel="noreferrer">🧰 Fiverr</a></li>
-                                <li><a href="#" target="_blank" rel="noreferrer">🧰 Toptal</a></li>
+                                <li><a href="https://www.fiverr.com/s/rE8jdXb" target="_blank" rel="noreferrer">🧩 Fiverr</a></li>
+                                <li><a href="#" target="_blank" rel="noreferrer">🅣 Toptal</a></li>
                               </ul>
                             </div>
                           </div>
@@ -138,23 +177,17 @@ export default function Header() {
                   </li>
                 </ul>
 
-                {/* MOBILE: CTA inside the collapsible, full width */}
-                <div className="mt--xs d-lg-none">
+                {/* CTA INSIDE THE SAME COLUMN/MODULE */}
+                <div className="ml-auto mt--xs mt--0-lg">
                   <CTA href="https://calendly.com/andreamecenero/intro-call" style="primary-1" size="lg" upper>
                     Free consultation
                   </CTA>
                 </div>
+
               </div>
             </div>
-
-            {/* DESKTOP CTA inline (separate col) */}
-            <div className="col-lg-3 d-none d-lg-block text-right">
-              <CTA href="https://calendly.com/andreamecenero/intro-call" style="primary-1" size="lg" upper>
-                Free consultation
-              </CTA>
-            </div>
           </div>
-        </div>   
+        </div>
       </nav>
     </header>
   )
